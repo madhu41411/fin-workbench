@@ -83,7 +83,7 @@ export default function CreateJournalEntry() {
             }
 
             alert(`Journal Entry ${action === 'save' ? 'Saved' : 'Submitted'} successfully!`);
-            navigate('/journal-entries');
+            navigate('/mje/journal-entries');
         } catch (error) {
             console.error('Error:', error);
             alert(`Failed to save entry: ${error.response?.data?.error?.message || error.message}`);
@@ -144,7 +144,7 @@ export default function CreateJournalEntry() {
             <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
                     <button
-                        onClick={() => navigate('/journal-entries')}
+                        onClick={() => navigate('/mje/journal-entries')}
                         className="p-2 hover:bg-slate-100 rounded-full transition-colors text-slate-500"
                     >
                         <ArrowLeft className="w-5 h-5" />

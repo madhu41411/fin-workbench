@@ -2,13 +2,21 @@ using {
     cuid,
     managed
 } from '@sap/cds/common';
+using {sap.ppc} from '../db/ppc-schema';
 
 service PostingPeriodService {
 
+    @readonly
+    entity CompanyCodes as projection on ppc.CompanyCodes;
+
+    @readonly
+    entity Periods      as projection on ppc.Periods;
+
     entity PostingPeriodRequests : cuid, managed {
-        period      : Integer;
+        period      : String(10);
         year        : Integer;
         companyCode : String(4);
+        variant     : String;
         reason      : String;
         status      : String enum {
             OPEN;
@@ -17,6 +25,7 @@ service PostingPeriodService {
         };
         ticketId    : String;
         comments    : String;
+        payload     : LargeString;
     }
 
     entity TimeLogs : cuid, managed {
@@ -27,6 +36,8 @@ service PostingPeriodService {
         activity  : String;
     }
 
-    action openPeriod(period : Integer, year : Integer, companyCode : String, reason : String) returns String;
-    action closePeriod(requestId : UUID)                                                       returns String;
+    action openPeriod(period : String(10), year : Integer, companyCode : String, variant : String, reason : String)  returns String;
+    action closePeriod(period : String(10), year : Integer, companyCode : String, variant : String, reason : String) returns String;
+    action closeRequest(requestId : UUID)                                                                            returns String;
+    action sendToSap(requestId : UUID)                                                                               returns String;
 }

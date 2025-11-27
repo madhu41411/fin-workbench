@@ -52,7 +52,7 @@ export default function JournalEntries() {
                     <p className="text-slate-500">Manage and track your manual journal entries</p>
                 </div>
                 <Link
-                    to="/journal-entries/new"
+                    to="/mje/journal-entries/new"
                     className="bg-accent hover:bg-blue-600 text-white px-4 py-2 rounded-lg font-medium flex items-center gap-2 transition-colors shadow-sm shadow-blue-200"
                 >
                     <Plus className="w-4 h-4" />
@@ -96,7 +96,7 @@ export default function JournalEntries() {
                                 <td className="px-6 py-4 font-medium text-accent">
                                     <div className="flex items-center gap-2">
                                         <FileText className="w-4 h-4 text-slate-400" />
-                                        <Link to={`/journal-entries/${entry.id}`} className="hover:underline">
+                                        <Link to={`/mje/journal-entries/${entry.id}`} className="hover:underline">
                                             {entry.id}
                                         </Link>
                                     </div>

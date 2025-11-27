@@ -16,6 +16,8 @@ build-parameters:
         - cd app/ppc-ui && npm install && npm run build
         - mkdir -p gen/srv/app/ppc-ui
         - cp -r app/ppc-ui/dist/. gen/srv/app/ppc-ui/
+        - mkdir -p gen/srv/app/invoice-matcher
+        - cp -r app/invoice-matcher/. gen/srv/app/invoice-matcher/
         - echo "module.exports = require('./srv/server.js')" > gen/srv/server.js
 modules:
   - name: bookshop-srv

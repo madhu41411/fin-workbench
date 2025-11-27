@@ -6,7 +6,12 @@ service MJEService {
             action submitForApproval();
             action approve(comment : String);
             action reject(comment : String);
-            action postToSAP() returns String;
+            action sendToSBPA(processDefinition : String) returns {
+                processInstanceId : UUID;
+                sbpaInstanceId : String;
+            };
+            action postToSAP()                            returns String;
+            action previewSAPPayload()                    returns String;
         };
 
     entity JournalEntryItems as projection on my.JournalEntryItems;

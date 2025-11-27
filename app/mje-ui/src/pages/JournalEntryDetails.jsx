@@ -22,7 +22,11 @@ export default function JournalEntryDetails() {
     const [entry, setEntry] = useState(null);
     const [loading, setLoading] = useState(true);
     const [posting, setPosting] = useState(false);
+    const [sendingToSBPA, setSendingToSBPA] = useState(false);
     const [error, setError] = useState(null);
+
+    const [previewPayload, setPreviewPayload] = useState(null);
+    const [showPreview, setShowPreview] = useState(false);
 
     useEffect(() => {
         fetchDetails();
@@ -37,6 +41,17 @@ export default function JournalEntryDetails() {
             setError("Failed to load journal entry details.");
         } finally {
             setLoading(false);
+        }
+    };
+
+    const handlePreviewPayload = async () => {
+        try {
+            const response = await axios.post(`/odata/v4/mje/JournalEntries(${id})/MJEService.previewSAPPayload`, {});
+            setPreviewPayload(response.data.value || response.data);
+            setShowPreview(true);
+        } catch (err) {
+            console.error("Failed to preview payload:", err);
+            alert("Failed to generate preview. Please check logs.");
         }
     };
 
@@ -58,15 +73,36 @@ export default function JournalEntryDetails() {
         }
     };
 
+    const handleSendToSBPA = async () => {
+        const processDefId = prompt("Enter SBPA Process Definition ID:", "mje-approval-process");
+        if (!processDefId) return;
+
+        setSendingToSBPA(true);
+        try {
+            const response = await axios.post(`/odata/v4/mje/JournalEntries(${id})/MJEService.sendToSBPA`, {
+                processDefinition: processDefId
+            });
+
+            const { sbpaInstanceId } = response.data;
+            alert(`Successfully triggered SBPA workflow!\nInstance ID: ${sbpaInstanceId}`);
+            fetchDetails(); // Refresh to show updated status
+        } catch (err) {
+            console.error("Failed to send to SBPA:", err);
+            alert(`Failed to trigger SBPA workflow: ${err.response?.data?.error?.message || err.message}`);
+        } finally {
+            setSendingToSBPA(false);
+        }
+    };
+
     if (loading) return <div className="p-8 text-center text-slate-500">Loading details...</div>;
     if (error) return <div className="p-8 text-center text-red-500">{error}</div>;
     if (!entry) return <div className="p-8 text-center text-slate-500">Entry not found.</div>;
 
     return (
-        <div className="space-y-6 max-w-5xl mx-auto">
+        <div className="space-y-6 max-w-5xl mx-auto relative">
             {/* Header / Back Button */}
             <div className="flex items-center gap-4">
-                <Link to="/journal-entries" className="p-2 hover:bg-slate-100 rounded-full transition-colors">
+                <Link to="/mje/journal-entries" className="p-2 hover:bg-slate-100 rounded-full transition-colors">
                     <ArrowLeft className="w-5 h-5 text-slate-600" />
                 </Link>
                 <div>
@@ -74,15 +110,34 @@ export default function JournalEntryDetails() {
                     <p className="text-slate-500 text-sm">ID: {entry.ID}</p>
                 </div>
                 <div className="ml-auto flex items-center gap-4">
-                    {entry.status === 'Approved' && !entry.accountingDocumentNumber && (
+                    {(entry.status === 'Draft' || entry.status === 'Pending') && (
                         <button
-                            onClick={handlePostToSAP}
-                            disabled={posting}
-                            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium flex items-center gap-2 transition-colors disabled:opacity-50"
+                            onClick={handleSendToSBPA}
+                            disabled={sendingToSBPA}
+                            className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-medium flex items-center gap-2 transition-colors disabled:opacity-50"
                         >
-                            {posting ? <Clock className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
-                            {posting ? 'Posting...' : 'Post in SAP'}
+                            {sendingToSBPA ? <Clock className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
+                            {sendingToSBPA ? 'Sending...' : 'Send for SBPA Approval'}
                         </button>
+                    )}
+                    {entry.status === 'Approved' && !entry.accountingDocumentNumber && (
+                        <>
+                            <button
+                                onClick={handlePreviewPayload}
+                                className="bg-slate-100 hover:bg-slate-200 text-slate-700 px-4 py-2 rounded-lg font-medium flex items-center gap-2 transition-colors"
+                            >
+                                <FileText className="w-4 h-4" />
+                                Preview Payload
+                            </button>
+                            <button
+                                onClick={handlePostToSAP}
+                                disabled={posting}
+                                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium flex items-center gap-2 transition-colors disabled:opacity-50"
+                            >
+                                {posting ? <Clock className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
+                                {posting ? 'Posting...' : 'Post in SAP'}
+                            </button>
+                        </>
                     )}
                     <StatusBadge status={entry.status} />
                 </div>
@@ -203,6 +258,46 @@ export default function JournalEntryDetails() {
                     )}
                 </div>
             </div>
+
+            {/* Preview Modal */}
+            {showPreview && (
+                <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+                    <div className="bg-white rounded-xl shadow-xl w-full max-w-3xl max-h-[80vh] flex flex-col">
+                        <div className="flex items-center justify-between p-6 border-b border-slate-100">
+                            <h3 className="text-lg font-bold text-slate-900">SAP Payload Preview</h3>
+                            <button
+                                onClick={() => setShowPreview(false)}
+                                className="p-2 hover:bg-slate-100 rounded-full transition-colors"
+                            >
+                                <XCircle className="w-6 h-6 text-slate-400" />
+                            </button>
+                        </div>
+                        <div className="p-6 overflow-auto bg-slate-50 font-mono text-sm">
+                            <pre className="whitespace-pre-wrap break-all text-slate-700">
+                                {typeof previewPayload === 'string' ? previewPayload : JSON.stringify(previewPayload, null, 2)}
+                            </pre>
+                        </div>
+                        <div className="p-6 border-t border-slate-100 flex justify-end gap-3">
+                            <button
+                                onClick={() => setShowPreview(false)}
+                                className="px-4 py-2 text-slate-600 hover:bg-slate-100 rounded-lg font-medium transition-colors"
+                            >
+                                Close
+                            </button>
+                            <button
+                                onClick={() => {
+                                    setShowPreview(false);
+                                    handlePostToSAP();
+                                }}
+                                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium flex items-center gap-2 transition-colors"
+                            >
+                                <Send className="w-4 h-4" />
+                                Post to SAP
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

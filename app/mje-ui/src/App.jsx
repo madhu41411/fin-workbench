@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
 import JournalEntries from './pages/JournalEntries';
@@ -14,6 +14,7 @@ function App() {
     <Router basename="/app/mje-ui">
       <Routes>
         <Route path="/" element={<LandingPage />} />
+        <Route path="/index.html" element={<Navigate to="/" replace />} />
         <Route path="/mje/*" element={
           <Layout>
             <Routes>

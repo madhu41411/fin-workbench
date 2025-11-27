@@ -1,6 +1,7 @@
 const cds = require('@sap/cds');
 const express = require('express');
 const path = require('path');
+const sbpaWebhook = require('./sbpa-webhook');
 
 cds.on('served', () => {
     const app = cds.app;
@@ -27,6 +28,15 @@ cds.on('served', () => {
         });
 
         console.log(`[PPC] Static files middleware registered for /app/ppc-ui from ${ppcUiPath}`);
+
+        // Serve static files for invoice-matcher
+        const imPath = path.join(__dirname, '..', 'app', 'invoice-matcher');
+        app.use('/app/invoice-matcher', express.static(imPath));
+        console.log(`[IM] Static files middleware registered for /app/invoice-matcher from ${imPath}`);
+
+        // Register SBPA webhook routes
+        sbpaWebhook(app);
+        console.log('[SBPA] Webhook routes registered');
     }
 });
 

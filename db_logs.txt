@@ -1,0 +1,298 @@
+Retrieving logs for app bookshop-db in org dc6127cdtrial / space dev as madhu414@gmail.com...
+
+   2025-11-27T08:28:05.96+0800 [API/4] OUT Updated app with guid 9f00e3b7-6c96-4169-96e5-9c1b47b749ac ({"lifecycle"=>{"data"=>{"buildpacks"=>["nodejs_buildpack"]}, "type"=>"buildpack"}})
+   2025-11-27T08:28:06.05+0800 [API/6] OUT Updating process: "web"
+   2025-11-27T08:28:21.71+0800 [API/8] OUT Uploading app package for app with guid 9f00e3b7-6c96-4169-96e5-9c1b47b749ac
+   2025-11-27T08:28:21.92+0800 [API/2] OUT Updated app with guid 9f00e3b7-6c96-4169-96e5-9c1b47b749ac ({"environment_variables"=>"[PRIVATE DATA HIDDEN]"})
+   2025-11-27T08:28:31.75+0800 [API/14] OUT Creating build for app with guid 9f00e3b7-6c96-4169-96e5-9c1b47b749ac
+   2025-11-27T08:28:32.12+0800 [STG/0] OUT Downloading nodejs_buildpack...
+   2025-11-27T08:28:32.18+0800 [STG/0] OUT Downloaded nodejs_buildpack
+   2025-11-27T08:28:32.18+0800 [STG/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 creating container for instance 8fd35363-bf46-4c48-87a2-96b7f71f326f
+   2025-11-27T08:28:32.51+0800 [STG/0] OUT Security group rules were updated
+   2025-11-27T08:28:32.56+0800 [STG/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 successfully created container for instance 8fd35363-bf46-4c48-87a2-96b7f71f326f
+   2025-11-27T08:28:32.70+0800 [STG/0] OUT Downloading build artifacts cache...
+   2025-11-27T08:28:32.70+0800 [STG/0] OUT Downloading app package...
+   2025-11-27T08:28:32.80+0800 [STG/0] OUT Downloaded build artifacts cache (226B)
+   2025-11-27T08:28:33.04+0800 [STG/0] OUT Downloaded app package (2.2M)
+   2025-11-27T08:28:33.10+0800 [STG/0] OUT -----> Nodejs Buildpack version 1.8.39
+   2025-11-27T08:28:33.19+0800 [STG/0] OUT -----> Bootstrapping python
+   2025-11-27T08:28:33.19+0800 [STG/0] OUT -----> Installing python 3.11.13
+   2025-11-27T08:28:33.19+0800 [STG/0] OUT Copy [/tmp/buildpacks/5c86f85b4142c4b7/dependencies/28094bfda36b8c744219390b5b628ee3/python_3.11.13_linux_x64_cflinuxfs4_49160849.tgz]
+   2025-11-27T08:28:36.03+0800 [STG/0] OUT -----> Installing binaries
+   2025-11-27T08:28:36.03+0800 [STG/0] OUT engines.node (package.json): >=18
+   2025-11-27T08:28:36.03+0800 [STG/0] OUT engines.npm (package.json): unspecified (use default)
+   2025-11-27T08:28:36.03+0800 [STG/0] OUT [31;1m**WARNING**[0m Dangerous semver range (>) in engines.node. See: http://docs.cloudfoundry.org/buildpacks/node/node-tips.html
+   2025-11-27T08:28:36.03+0800 [STG/0] OUT -----> Installing node 24.3.0
+   2025-11-27T08:28:36.03+0800 [STG/0] OUT Copy [/tmp/buildpacks/5c86f85b4142c4b7/dependencies/54b65851559bd58ad3fd2aac68936cd9/node_24.3.0_linux_x64_cflinuxfs4_b6ec3828.tgz]
+   2025-11-27T08:28:37.77+0800 [STG/0] OUT Using default npm version: 11.4.2
+   2025-11-27T08:28:37.77+0800 [STG/0] OUT -----> Installing yarn 1.22.22
+   2025-11-27T08:28:37.77+0800 [STG/0] OUT Copy [/tmp/buildpacks/5c86f85b4142c4b7/dependencies/ff849eb7696d3a7f463752a272c9a88e/yarn_1.22.22_linux_noarch_any-stack_83bda680.tgz]
+   2025-11-27T08:28:38.02+0800 [STG/0] OUT Installed yarn 1.22.22
+   2025-11-27T08:28:38.02+0800 [STG/0] OUT -----> Creating runtime environment
+   2025-11-27T08:28:38.02+0800 [STG/0] OUT NODE_ENV=production
+   2025-11-27T08:28:38.02+0800 [STG/0] OUT NODE_HOME=/tmp/contents322115592/deps/0/node
+   2025-11-27T08:28:38.02+0800 [STG/0] OUT NODE_MODULES_CACHE=true
+   2025-11-27T08:28:38.02+0800 [STG/0] OUT NODE_VERBOSE=false
+   2025-11-27T08:28:38.02+0800 [STG/0] OUT NPM_CONFIG_LOGLEVEL=error
+   2025-11-27T08:28:38.02+0800 [STG/0] OUT NPM_CONFIG_PRODUCTION=true
+   2025-11-27T08:28:38.02+0800 [STG/0] OUT -----> Building dependencies
+   2025-11-27T08:28:38.02+0800 [STG/0] OUT Prebuild detected (node_modules already exists)
+   2025-11-27T08:28:38.02+0800 [STG/0] OUT Rebuilding any native modules
+   2025-11-27T08:28:38.42+0800 [STG/0] OUT rebuilt dependencies successfully
+   2025-11-27T08:28:38.47+0800 [STG/0] OUT Installing any new modules (package.json + package-lock.json)
+   2025-11-27T08:28:38.81+0800 [STG/0] OUT up to date in 280ms
+   2025-11-27T08:28:38.81+0800 [STG/0] OUT 3 packages are looking for funding
+   2025-11-27T08:28:38.81+0800 [STG/0] OUT run `npm fund` for details
+   2025-11-27T08:28:39.30+0800 [STG/0] OUT Contrast Security no credentials found. Will not write environment files.
+   2025-11-27T08:28:46.81+0800 [STG/0] OUT Exit status 0
+   2025-11-27T08:28:46.81+0800 [STG/0] OUT Uploading droplet, build artifacts cache...
+   2025-11-27T08:28:46.81+0800 [STG/0] OUT Uploading droplet...
+   2025-11-27T08:28:46.81+0800 [STG/0] OUT Uploading build artifacts cache...
+   2025-11-27T08:28:46.84+0800 [STG/0] OUT Uploaded build artifacts cache (227B)
+   2025-11-27T08:28:47.33+0800 [API/4] OUT Creating droplet for app with guid 9f00e3b7-6c96-4169-96e5-9c1b47b749ac
+   2025-11-27T08:28:52.40+0800 [STG/0] OUT Uploaded droplet (58.8M)
+   2025-11-27T08:28:52.41+0800 [STG/0] OUT Uploading complete
+   2025-11-27T08:28:52.61+0800 [STG/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 stopping instance 8fd35363-bf46-4c48-87a2-96b7f71f326f
+   2025-11-27T08:28:52.61+0800 [STG/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 destroying container for instance 8fd35363-bf46-4c48-87a2-96b7f71f326f
+   2025-11-27T08:28:54.32+0800 [STG/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 successfully destroyed container for instance 8fd35363-bf46-4c48-87a2-96b7f71f326f
+   2025-11-27T08:29:01.72+0800 [API/0] OUT Updated app with guid 9f00e3b7-6c96-4169-96e5-9c1b47b749ac ({:droplet_guid=>"e919d88b-40dd-4397-8e77-cd5428cbd602"})
+   2025-11-27T08:29:02.18+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 creating container for instance e573f927-b9f6-4007-8d04-3a375fcac35c
+   2025-11-27T08:29:02.51+0800 [CELL/0] OUT Security group rules were updated
+   2025-11-27T08:29:02.57+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 successfully created container for instance e573f927-b9f6-4007-8d04-3a375fcac35c
+   2025-11-27T08:29:05.30+0800 [APP/TASK/deploy/0] OUT Invoking pre-start scripts.
+   2025-11-27T08:29:05.44+0800 [APP/TASK/deploy/0] OUT Invoking start command.
+   2025-11-27T08:29:05.74+0800 [APP/TASK/deploy/0] OUT > start
+   2025-11-27T08:29:05.74+0800 [APP/TASK/deploy/0] OUT > node node_modules/@sap/hdi-deploy/deploy.js --use-hdb --parameter com.sap.hana.di.table/try_fast_table_migration=true
+   2025-11-27T08:29:05.84+0800 [APP/TASK/deploy/0] OUT VCAP_SERVICES: {
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "hana": [
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT {
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "label": "hana",
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "provider": null,
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "plan": "hdi-shared",
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "name": "bookshop-db-hdi-container",
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "tags": [
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "hana",
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "database",
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "relational"
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT ],
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "instance_guid": "62040c25-07ae-4e2c-85d4-a84adc7ef6be",
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "instance_name": "bookshop-db-hdi-container",
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "binding_guid": "d63bd544-431b-4268-90c9-f26ddc21ad41",
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "binding_name": null,
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "credentials": {
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "database_id": "ed5da539-d8e2-4074-bd8a-655b30ed5521",
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "host": "ed5da539-d8e2-4074-bd8a-655b30ed5521.hana.trial-us10.hanacloud.ondemand.com",
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "port": "443",
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "driver": "com.sap.db.jdbc.Driver",
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "url": "jdbc:sap://ed5da539-d8e2-4074-bd8a-655b30ed5521.hana.trial-us10.hanacloud.ondemand.com:443?encrypt=true&validateCertificate=true&currentschema=9FA3AD2F596746F2BA3B5C2029956093",
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "schema": "9FA3AD2F596746F2BA3B5C2029956093",
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "certificate": "-----BEGIN CERTIFICATE-----\nMIIDrzCCApegAwIBAgIQCDvgVpBCRrGhdWrJWZHHSjANBgkqhkiG9w0BAQUFADBh\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3\nd3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBD\nQTAeFw0wNjExMTAwMDAwMDBaFw0zMTExMTAwMDAwMDBaMGExCzAJBgNVBAYTAlVT\nMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j\nb20xIDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IENBMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4jvhEXLeqKTTo1eqUKKPC3eQyaKl7hLOllsB\nCSDMAZOnTjC3U/dDxGkAV53ijSLdhwZAAIEJzs4bg7/fzTtxRuLWZscFs3YnFo97\nnh6Vfe63SKMI2tavegw5BmV/Sl0fvBf4q77uKNd0f3p4mVmFaG5cIzJLv07A6Fpt\n43C/dxC//AH2hdmoRBBYMql1GNXRor5H4idq9Joz+EkIYIvUX7Q6hL+hqkpMfT7P\nT19sdl6gSzeRntwi5m3OFBqOasv+zbMUZBfHWymeMr/y7vrTC0LUq7dBMtoM1O/4\ngdW7jVg/tRvoSSiicNoxBN33shbyTApOB6jtSj1etX+jkMOvJwIDAQABo2MwYTAO\nBgNVHQ8BAf8EBAMCAYYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUA95QNVbR\nTLtm8KPiGxvDl7I90VUwHwYDVR0jBBgwFoAUA95QNVbRTLtm8KPiGxvDl7I90VUw\nDQYJKoZIhvcNAQEFBQADggEBAMucN6pIExIK+t1EnE9SsPTfrgT1eXkIoyQY/Esr\nhMAtudXH/vTBH1jLuG2cenTnmCmrEbXjcKChzUyImZOMkXDiqw8cvpOp/2PV5Adg\n06O/nVsJ8dWO41P0jmP6P6fbtGbfYmbW0W5BjfIttep3Sp+dWOIrWcBAI+0tKIJF\nPnlUkiaY4IBIqDfv8NZ5YBberOgOzW6sRBc4L0na4UU+Krk2U886UAb3LujEV0ls\nYSEY1QSteDwsOoBrp+uvFRTp2InBuThs4pFsiv9kuXclVzDAGySj4dzp30d8tbQk\nCAUw7C29C79Fv1C5qfPrmAESrciIxpg0X40KPMbp1ZWVbd4=\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIDjjCCAnagAwIBAgIQAzrx5qcRqaC7KGSxHQn65TANBgkqhkiG9w0BAQsFADBh\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3\nd3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBH\nMjAeFw0xMzA4MDExMjAwMDBaFw0zODAxMTUxMjAwMDBaMGExCzAJBgNVBAYTAlVT\nMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j\nb20xIDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IEcyMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuzfNNNx7a8myaJCtSnX/RrohCgiN9RlUyfuI\n2/Ou8jqJkTx65qsGGmvPrC3oXgkkRLpimn7Wo6h+4FR1IAWsULecYxpsMNzaHxmx\n1x7e/dfgy5SDN67sH0NO3Xss0r0upS/kqbitOtSZpLYl6ZtrAGCSYP9PIUkY92eQ\nq2EGnI/yuum06ZIya7XzV+hdG82MHauVBJVJ8zUtluNJbd134/tJS7SsVQepj5Wz\ntCO7TG1F8PapspUwtP1MVYwnSlcUfIKdzXOS0xZKBgyMUNGPHgm+F6HmIcr9g+UQ\nvIOlCsRnKPZzFBQ9RnbDhxSJITRNrw9FDKZJobq7nMWxM4MphQIDAQABo0IwQDAP\nBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBhjAdBgNVHQ4EFgQUTiJUIBiV\n5uNu5g/6+rkS7QYXjzkwDQYJKoZIhvcNAQELBQADggEBAGBnKJRvDkhj6zHd6mcY\n1Yl9PMWLSn/pvtsrF9+wX3N3KjITOYFnQoQj8kVnNeyIv/iPsGEMNKSuIEyExtv4\nNeF22d+mQrvHRAiGfzZ0JFrabA0UWTW98kndth/Jsw1HKj2ZL7tcu7XUIOGZX1NG\nFdtom/DzMNU+MeKNhJ7jitralj41E6Vf8PlwUHBHQRFXGU7Aj64GxJUTFy8bJZ91\n8rGOmaFvE7FBcf6IKshPECBV1/MUReXgRPTqh5Uykw7+U0b6LJ3/iyK5S9kJRaTe\npLiaWN0bfVKfjllDiIGknibVb63dDcY3fe0Dkhvld1927jyNxF1WW6LZZm6zNTfl\nMrY=\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIFZjCCA06gAwIBAgIQCPm0eKj6ftpqMzeJ3nzPijANBgkqhkiG9w0BAQwFADBN\nMQswCQYDVQQGEwJVUzEXMBUGA1UEChMORGlnaUNlcnQsIEluYy4xJTAjBgNVBAMT\nHERpZ2lDZXJ0IFRMUyBSU0E0MDk2IFJvb3QgRzUwHhcNMjEwMTE1MDAwMDAwWhcN\nNDYwMTE0MjM1OTU5WjBNMQswCQYDVQQGEwJVUzEXMBUGA1UEChMORGlnaUNlcnQs\nIEluYy4xJTAjBgNVBAMTHERpZ2lDZXJ0IFRMUyBSU0E0MDk2IFJvb3QgRzUwggIi\nMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCz0PTJeRGd/fxmgefM1eS87IE+\najWOLrfn3q/5B03PMJ3qCQuZvWxX2hhKuHisOjmopkisLnLlvevxGs3npAOpPxG0\n2C+JFvuUAT27L/gTBaF4HI4o4EXgg/RZG5Wzrn4DReW+wkL+7vI8toUTmDKdFqgp\nwgscONyfMXdcvyej/Cestyu9dJsXLfKB2l2w4SMXPohKEiPQ6s+d3gMXsUJKoBZM\npG2T6T867jp8nVid9E6P/DsjyG244gXazOvswzH016cpVIDPRFtMbzCe88zdH5RD\nnU1/cHAN1DrRN/BsnZvAFJNY781BOHW8EwOVfH/jXOnVDdXifBBiqmvwPXbzP6Po\nsMH976pXTayGpxi0KcEsDr9kvimM2AItzVwv8n/vFfQMFawKsPHTDU9qTXeXAaDx\nZre3zu/O7Oyldcqs4+Fj97ihBMi8ez9dLRYiVu1ISf6nL3kwJZu6ay0/nTvEF+cd\nLvvyz6b84xQslpghjLSR6Rlgg/IwKwZzUNWYOwbpx4oMYIwo+FKbbuH2TbsGJJvX\nKyY//SovcfXWJL5/MZ4PbeiPT02jP/816t9JXkGPhvnxd3lLG7SjXi/7RgLQZhNe\nXoVPzthwiHvOAbWWl9fNff2C+MIkwcoBOU+NosEUQB+cZtUMCUbW8tDRSHZWOkPL\ntgoRObqME2wGtZ7P6wIDAQABo0IwQDAdBgNVHQ4EFgQUUTMc7TZArxfTJc1paPKv\nTiM+s0EwDgYDVR0PAQH/BAQDAgGGMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcN\nAQEMBQADggIBAGCmr1tfV9qJ20tQqcQjNSH/0GEwhJG3PxDPJY7Jv0Y02cEhJhxw\nGXIeo8mH/qlDZJY6yFMECrZBu8RHANmfGBg7sg7zNOok992vIGCukihfNudd5N7H\nPNtQOa27PShNlnx2xlv0wdsUpasZYgcYQF+Xkdycx6u1UQ3maVNVzDl92sURVXLF\nO4uJ+DQtpBflF+aZfTCIITfNMBc9uPK8qHWgQ9w+iUuQrm0D4ByjoJYJu32jtyoQ\nREtGBzRj7TG5BO6jm5qu5jF49OokYTurWGT/u4cnYiWB39yhL/btp/96j1EuMPik\nAdKFOV8BmZZvWltwGUb+hmA+rYAQCd05JS9Yf7vSdPD3Rh9GOUrYU9DzLjtxpdRv\n/PNn5AeP3SYZ4Y1b+qOTEZvpyDrDVWiakuFSdjjo4bq9+0/V77PnSIMx8IIh47a+\np6tv75/fTM8BuGJqIz3nCU2AG3swpMPdB380vqQmsvZB6Akd4yCYqjdP//fx4ilw\nMUc/dNAUFvohigLVigmUdy7yWSiLfFCSCmZ4OIN1xLVaqBHG5cGdZlXPU8Sv13WF\nqUITVuwhd4GTWgzqltlJyqEI8pc7bZsEGCREjnwB8twl2F6GmrE52/WRMmrRpnCK\novfepEWFJqgejF0pW8hL2JpqA15w8oVPbEtoL8pU9ozaMv7Da4M/OMZ+\n-----END CERTIFICATE-----",
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "hdi_user": "9FA3AD2F596746F2BA3B5C2029956093_86A0WBBSWD7US5DE8ATIMFJQR_DT",
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "hdi_p[...]
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "user": "9FA3AD2F596746F2BA3B5C2029956093_86A0WBBSWD7US5DE8ATIMFJQR_RT",
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "p[...]
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT },
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "syslog_drain_url": null,
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT "volume_mounts": []
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT }
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT ]
+   2025-11-27T08:29:05.86+0800 [APP/TASK/deploy/0] OUT }
+   2025-11-27T08:29:10.12+0800 [APP/TASK/deploy/0] OUT @sap/hdi-deploy, version 5.5.1 (mode default), server version unknown (0.0.0.0), cloud version , node version 24.3.0, HDI version -1, container API version -1
+   2025-11-27T08:29:10.12+0800 [APP/TASK/deploy/0] OUT Deployment started at 2025-11-27 00:29:10
+   2025-11-27T08:29:10.12+0800 [APP/TASK/deploy/0] OUT Using hdb@0.19.12 for connection
+   2025-11-27T08:29:10.12+0800 [APP/TASK/deploy/0] OUT Detection of server version failed; root cause: HANA Database instance is stopped
+   2025-11-27T08:29:10.12+0800 [APP/TASK/deploy/0] OUT Detection of cloud version failed; root cause: HANA Database instance is stopped
+   2025-11-27T08:29:10.12+0800 [APP/TASK/deploy/0] OUT Detection of container API version failed; root cause: HANA Database instance is stopped
+   2025-11-27T08:29:10.12+0800 [APP/TASK/deploy/0] OUT Detection of HDI version failed; root cause: HANA Database instance is stopped
+   2025-11-27T08:29:10.12+0800 [APP/TASK/deploy/0] OUT Deployment ended at 2025-11-27 00:29:10
+   2025-11-27T08:29:10.12+0800 [APP/TASK/deploy/0] ERR Error: Option parameter is not supported by the server; based on detected server version unknown
+   2025-11-27T08:29:10.12+0800 [APP/TASK/deploy/0] OUT (4s 354ms)
+   2025-11-27T08:29:10.13+0800 [APP/TASK/deploy/0] ERR npm notice
+   2025-11-27T08:29:10.13+0800 [APP/TASK/deploy/0] ERR npm notice New minor version of npm available! 11.4.2 -> 11.6.4
+   2025-11-27T08:29:10.13+0800 [APP/TASK/deploy/0] ERR npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.4
+   2025-11-27T08:29:10.13+0800 [APP/TASK/deploy/0] ERR npm notice To update run: npm install -g npm@11.6.4
+   2025-11-27T08:29:10.13+0800 [APP/TASK/deploy/0] ERR npm notice
+   2025-11-27T08:29:10.19+0800 [APP/TASK/deploy/0] OUT Exit status 1
+   2025-11-27T08:29:10.31+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 stopping instance e573f927-b9f6-4007-8d04-3a375fcac35c
+   2025-11-27T08:29:10.31+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 destroying container for instance e573f927-b9f6-4007-8d04-3a375fcac35c
+   2025-11-27T08:29:11.84+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 successfully destroyed container for instance e573f927-b9f6-4007-8d04-3a375fcac35c
+   2025-11-27T08:29:13.13+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 creating container for instance 3cab8893-87dc-4c8f-8015-674b1f03a749
+   2025-11-27T08:29:13.48+0800 [CELL/0] OUT Security group rules were updated
+   2025-11-27T08:29:13.55+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 successfully created container for instance 3cab8893-87dc-4c8f-8015-674b1f03a749
+   2025-11-27T08:29:16.23+0800 [APP/TASK/deploy/0] OUT Invoking pre-start scripts.
+   2025-11-27T08:29:16.37+0800 [APP/TASK/deploy/0] OUT Invoking start command.
+   2025-11-27T08:29:16.67+0800 [APP/TASK/deploy/0] OUT > start
+   2025-11-27T08:29:16.67+0800 [APP/TASK/deploy/0] OUT > node node_modules/@sap/hdi-deploy/deploy.js --use-hdb --parameter com.sap.hana.di.table/try_fast_table_migration=true
+   2025-11-27T08:29:16.77+0800 [APP/TASK/deploy/0] OUT VCAP_SERVICES: {
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "hana": [
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT {
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "label": "hana",
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "provider": null,
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "plan": "hdi-shared",
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "name": "bookshop-db-hdi-container",
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "tags": [
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "hana",
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "database",
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "relational"
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT ],
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "instance_guid": "62040c25-07ae-4e2c-85d4-a84adc7ef6be",
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "instance_name": "bookshop-db-hdi-container",
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "binding_guid": "d63bd544-431b-4268-90c9-f26ddc21ad41",
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "binding_name": null,
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "credentials": {
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "database_id": "ed5da539-d8e2-4074-bd8a-655b30ed5521",
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "host": "ed5da539-d8e2-4074-bd8a-655b30ed5521.hana.trial-us10.hanacloud.ondemand.com",
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "port": "443",
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "driver": "com.sap.db.jdbc.Driver",
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "url": "jdbc:sap://ed5da539-d8e2-4074-bd8a-655b30ed5521.hana.trial-us10.hanacloud.ondemand.com:443?encrypt=true&validateCertificate=true&currentschema=9FA3AD2F596746F2BA3B5C2029956093",
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "schema": "9FA3AD2F596746F2BA3B5C2029956093",
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "certificate": "-----BEGIN CERTIFICATE-----\nMIIDrzCCApegAwIBAgIQCDvgVpBCRrGhdWrJWZHHSjANBgkqhkiG9w0BAQUFADBh\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3\nd3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBD\nQTAeFw0wNjExMTAwMDAwMDBaFw0zMTExMTAwMDAwMDBaMGExCzAJBgNVBAYTAlVT\nMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j\nb20xIDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IENBMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4jvhEXLeqKTTo1eqUKKPC3eQyaKl7hLOllsB\nCSDMAZOnTjC3U/dDxGkAV53ijSLdhwZAAIEJzs4bg7/fzTtxRuLWZscFs3YnFo97\nnh6Vfe63SKMI2tavegw5BmV/Sl0fvBf4q77uKNd0f3p4mVmFaG5cIzJLv07A6Fpt\n43C/dxC//AH2hdmoRBBYMql1GNXRor5H4idq9Joz+EkIYIvUX7Q6hL+hqkpMfT7P\nT19sdl6gSzeRntwi5m3OFBqOasv+zbMUZBfHWymeMr/y7vrTC0LUq7dBMtoM1O/4\ngdW7jVg/tRvoSSiicNoxBN33shbyTApOB6jtSj1etX+jkMOvJwIDAQABo2MwYTAO\nBgNVHQ8BAf8EBAMCAYYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUA95QNVbR\nTLtm8KPiGxvDl7I90VUwHwYDVR0jBBgwFoAUA95QNVbRTLtm8KPiGxvDl7I90VUw\nDQYJKoZIhvcNAQEFBQADggEBAMucN6pIExIK+t1EnE9SsPTfrgT1eXkIoyQY/Esr\nhMAtudXH/vTBH1jLuG2cenTnmCmrEbXjcKChzUyImZOMkXDiqw8cvpOp/2PV5Adg\n06O/nVsJ8dWO41P0jmP6P6fbtGbfYmbW0W5BjfIttep3Sp+dWOIrWcBAI+0tKIJF\nPnlUkiaY4IBIqDfv8NZ5YBberOgOzW6sRBc4L0na4UU+Krk2U886UAb3LujEV0ls\nYSEY1QSteDwsOoBrp+uvFRTp2InBuThs4pFsiv9kuXclVzDAGySj4dzp30d8tbQk\nCAUw7C29C79Fv1C5qfPrmAESrciIxpg0X40KPMbp1ZWVbd4=\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIDjjCCAnagAwIBAgIQAzrx5qcRqaC7KGSxHQn65TANBgkqhkiG9w0BAQsFADBh\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3\nd3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBH\nMjAeFw0xMzA4MDExMjAwMDBaFw0zODAxMTUxMjAwMDBaMGExCzAJBgNVBAYTAlVT\nMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j\nb20xIDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IEcyMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuzfNNNx7a8myaJCtSnX/RrohCgiN9RlUyfuI\n2/Ou8jqJkTx65qsGGmvPrC3oXgkkRLpimn7Wo6h+4FR1IAWsULecYxpsMNzaHxmx\n1x7e/dfgy5SDN67sH0NO3Xss0r0upS/kqbitOtSZpLYl6ZtrAGCSYP9PIUkY92eQ\nq2EGnI/yuum06ZIya7XzV+hdG82MHauVBJVJ8zUtluNJbd134/tJS7SsVQepj5Wz\ntCO7TG1F8PapspUwtP1MVYwnSlcUfIKdzXOS0xZKBgyMUNGPHgm+F6HmIcr9g+UQ\nvIOlCsRnKPZzFBQ9RnbDhxSJITRNrw9FDKZJobq7nMWxM4MphQIDAQABo0IwQDAP\nBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBhjAdBgNVHQ4EFgQUTiJUIBiV\n5uNu5g/6+rkS7QYXjzkwDQYJKoZIhvcNAQELBQADggEBAGBnKJRvDkhj6zHd6mcY\n1Yl9PMWLSn/pvtsrF9+wX3N3KjITOYFnQoQj8kVnNeyIv/iPsGEMNKSuIEyExtv4\nNeF22d+mQrvHRAiGfzZ0JFrabA0UWTW98kndth/Jsw1HKj2ZL7tcu7XUIOGZX1NG\nFdtom/DzMNU+MeKNhJ7jitralj41E6Vf8PlwUHBHQRFXGU7Aj64GxJUTFy8bJZ91\n8rGOmaFvE7FBcf6IKshPECBV1/MUReXgRPTqh5Uykw7+U0b6LJ3/iyK5S9kJRaTe\npLiaWN0bfVKfjllDiIGknibVb63dDcY3fe0Dkhvld1927jyNxF1WW6LZZm6zNTfl\nMrY=\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIFZjCCA06gAwIBAgIQCPm0eKj6ftpqMzeJ3nzPijANBgkqhkiG9w0BAQwFADBN\nMQswCQYDVQQGEwJVUzEXMBUGA1UEChMORGlnaUNlcnQsIEluYy4xJTAjBgNVBAMT\nHERpZ2lDZXJ0IFRMUyBSU0E0MDk2IFJvb3QgRzUwHhcNMjEwMTE1MDAwMDAwWhcN\nNDYwMTE0MjM1OTU5WjBNMQswCQYDVQQGEwJVUzEXMBUGA1UEChMORGlnaUNlcnQs\nIEluYy4xJTAjBgNVBAMTHERpZ2lDZXJ0IFRMUyBSU0E0MDk2IFJvb3QgRzUwggIi\nMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCz0PTJeRGd/fxmgefM1eS87IE+\najWOLrfn3q/5B03PMJ3qCQuZvWxX2hhKuHisOjmopkisLnLlvevxGs3npAOpPxG0\n2C+JFvuUAT27L/gTBaF4HI4o4EXgg/RZG5Wzrn4DReW+wkL+7vI8toUTmDKdFqgp\nwgscONyfMXdcvyej/Cestyu9dJsXLfKB2l2w4SMXPohKEiPQ6s+d3gMXsUJKoBZM\npG2T6T867jp8nVid9E6P/DsjyG244gXazOvswzH016cpVIDPRFtMbzCe88zdH5RD\nnU1/cHAN1DrRN/BsnZvAFJNY781BOHW8EwOVfH/jXOnVDdXifBBiqmvwPXbzP6Po\nsMH976pXTayGpxi0KcEsDr9kvimM2AItzVwv8n/vFfQMFawKsPHTDU9qTXeXAaDx\nZre3zu/O7Oyldcqs4+Fj97ihBMi8ez9dLRYiVu1ISf6nL3kwJZu6ay0/nTvEF+cd\nLvvyz6b84xQslpghjLSR6Rlgg/IwKwZzUNWYOwbpx4oMYIwo+FKbbuH2TbsGJJvX\nKyY//SovcfXWJL5/MZ4PbeiPT02jP/816t9JXkGPhvnxd3lLG7SjXi/7RgLQZhNe\nXoVPzthwiHvOAbWWl9fNff2C+MIkwcoBOU+NosEUQB+cZtUMCUbW8tDRSHZWOkPL\ntgoRObqME2wGtZ7P6wIDAQABo0IwQDAdBgNVHQ4EFgQUUTMc7TZArxfTJc1paPKv\nTiM+s0EwDgYDVR0PAQH/BAQDAgGGMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcN\nAQEMBQADggIBAGCmr1tfV9qJ20tQqcQjNSH/0GEwhJG3PxDPJY7Jv0Y02cEhJhxw\nGXIeo8mH/qlDZJY6yFMECrZBu8RHANmfGBg7sg7zNOok992vIGCukihfNudd5N7H\nPNtQOa27PShNlnx2xlv0wdsUpasZYgcYQF+Xkdycx6u1UQ3maVNVzDl92sURVXLF\nO4uJ+DQtpBflF+aZfTCIITfNMBc9uPK8qHWgQ9w+iUuQrm0D4ByjoJYJu32jtyoQ\nREtGBzRj7TG5BO6jm5qu5jF49OokYTurWGT/u4cnYiWB39yhL/btp/96j1EuMPik\nAdKFOV8BmZZvWltwGUb+hmA+rYAQCd05JS9Yf7vSdPD3Rh9GOUrYU9DzLjtxpdRv\n/PNn5AeP3SYZ4Y1b+qOTEZvpyDrDVWiakuFSdjjo4bq9+0/V77PnSIMx8IIh47a+\np6tv75/fTM8BuGJqIz3nCU2AG3swpMPdB380vqQmsvZB6Akd4yCYqjdP//fx4ilw\nMUc/dNAUFvohigLVigmUdy7yWSiLfFCSCmZ4OIN1xLVaqBHG5cGdZlXPU8Sv13WF\nqUITVuwhd4GTWgzqltlJyqEI8pc7bZsEGCREjnwB8twl2F6GmrE52/WRMmrRpnCK\novfepEWFJqgejF0pW8hL2JpqA15w8oVPbEtoL8pU9ozaMv7Da4M/OMZ+\n-----END CERTIFICATE-----",
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "hdi_user": "9FA3AD2F596746F2BA3B5C2029956093_86A0WBBSWD7US5DE8ATIMFJQR_DT",
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "hdi_p[...]
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "user": "9FA3AD2F596746F2BA3B5C2029956093_86A0WBBSWD7US5DE8ATIMFJQR_RT",
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "p[...]
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT },
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "syslog_drain_url": null,
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT "volume_mounts": []
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT }
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT ]
+   2025-11-27T08:29:16.79+0800 [APP/TASK/deploy/0] OUT }
+   2025-11-27T08:29:21.03+0800 [APP/TASK/deploy/0] OUT @sap/hdi-deploy, version 5.5.1 (mode default), server version unknown (0.0.0.0), cloud version , node version 24.3.0, HDI version -1, container API version -1
+   2025-11-27T08:29:21.03+0800 [APP/TASK/deploy/0] OUT Deployment started at 2025-11-27 00:29:21
+   2025-11-27T08:29:21.03+0800 [APP/TASK/deploy/0] OUT Using hdb@0.19.12 for connection
+   2025-11-27T08:29:21.03+0800 [APP/TASK/deploy/0] OUT Detection of server version failed; root cause: HANA Database instance is stopped
+   2025-11-27T08:29:21.03+0800 [APP/TASK/deploy/0] OUT Detection of cloud version failed; root cause: HANA Database instance is stopped
+   2025-11-27T08:29:21.03+0800 [APP/TASK/deploy/0] OUT Detection of container API version failed; root cause: HANA Database instance is stopped
+   2025-11-27T08:29:21.03+0800 [APP/TASK/deploy/0] OUT Detection of HDI version failed; root cause: HANA Database instance is stopped
+   2025-11-27T08:29:21.03+0800 [APP/TASK/deploy/0] OUT Deployment ended at 2025-11-27 00:29:21
+   2025-11-27T08:29:21.03+0800 [APP/TASK/deploy/0] ERR Error: Option parameter is not supported by the server; based on detected server version unknown
+   2025-11-27T08:29:21.03+0800 [APP/TASK/deploy/0] OUT (4s 326ms)
+   2025-11-27T08:29:21.04+0800 [APP/TASK/deploy/0] ERR npm notice
+   2025-11-27T08:29:21.04+0800 [APP/TASK/deploy/0] ERR npm notice New minor version of npm available! 11.4.2 -> 11.6.4
+   2025-11-27T08:29:21.04+0800 [APP/TASK/deploy/0] ERR npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.4
+   2025-11-27T08:29:21.04+0800 [APP/TASK/deploy/0] ERR npm notice To update run: npm install -g npm@11.6.4
+   2025-11-27T08:29:21.04+0800 [APP/TASK/deploy/0] ERR npm notice
+   2025-11-27T08:29:21.09+0800 [APP/TASK/deploy/0] OUT Exit status 1
+   2025-11-27T08:29:21.19+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 stopping instance 3cab8893-87dc-4c8f-8015-674b1f03a749
+   2025-11-27T08:29:21.19+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 destroying container for instance 3cab8893-87dc-4c8f-8015-674b1f03a749
+   2025-11-27T08:29:22.87+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 successfully destroyed container for instance 3cab8893-87dc-4c8f-8015-674b1f03a749
+   2025-11-27T08:29:23.60+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 creating container for instance 32660ce2-b586-4d25-aa23-4ce7820a2ab3
+   2025-11-27T08:29:23.93+0800 [CELL/0] OUT Security group rules were updated
+   2025-11-27T08:29:23.99+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 successfully created container for instance 32660ce2-b586-4d25-aa23-4ce7820a2ab3
+   2025-11-27T08:29:26.65+0800 [APP/TASK/deploy/0] OUT Invoking pre-start scripts.
+   2025-11-27T08:29:26.79+0800 [APP/TASK/deploy/0] OUT Invoking start command.
+   2025-11-27T08:29:27.09+0800 [APP/TASK/deploy/0] OUT > start
+   2025-11-27T08:29:27.09+0800 [APP/TASK/deploy/0] OUT > node node_modules/@sap/hdi-deploy/deploy.js --use-hdb --parameter com.sap.hana.di.table/try_fast_table_migration=true
+   2025-11-27T08:29:27.19+0800 [APP/TASK/deploy/0] OUT VCAP_SERVICES: {
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "hana": [
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT {
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "label": "hana",
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "provider": null,
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "plan": "hdi-shared",
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "name": "bookshop-db-hdi-container",
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "tags": [
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "hana",
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "database",
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "relational"
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT ],
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "instance_guid": "62040c25-07ae-4e2c-85d4-a84adc7ef6be",
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "instance_name": "bookshop-db-hdi-container",
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "binding_guid": "d63bd544-431b-4268-90c9-f26ddc21ad41",
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "binding_name": null,
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "credentials": {
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "database_id": "ed5da539-d8e2-4074-bd8a-655b30ed5521",
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "host": "ed5da539-d8e2-4074-bd8a-655b30ed5521.hana.trial-us10.hanacloud.ondemand.com",
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "port": "443",
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "driver": "com.sap.db.jdbc.Driver",
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "url": "jdbc:sap://ed5da539-d8e2-4074-bd8a-655b30ed5521.hana.trial-us10.hanacloud.ondemand.com:443?encrypt=true&validateCertificate=true&currentschema=9FA3AD2F596746F2BA3B5C2029956093",
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "schema": "9FA3AD2F596746F2BA3B5C2029956093",
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "certificate": "-----BEGIN CERTIFICATE-----\nMIIDrzCCApegAwIBAgIQCDvgVpBCRrGhdWrJWZHHSjANBgkqhkiG9w0BAQUFADBh\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3\nd3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBD\nQTAeFw0wNjExMTAwMDAwMDBaFw0zMTExMTAwMDAwMDBaMGExCzAJBgNVBAYTAlVT\nMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j\nb20xIDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IENBMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4jvhEXLeqKTTo1eqUKKPC3eQyaKl7hLOllsB\nCSDMAZOnTjC3U/dDxGkAV53ijSLdhwZAAIEJzs4bg7/fzTtxRuLWZscFs3YnFo97\nnh6Vfe63SKMI2tavegw5BmV/Sl0fvBf4q77uKNd0f3p4mVmFaG5cIzJLv07A6Fpt\n43C/dxC//AH2hdmoRBBYMql1GNXRor5H4idq9Joz+EkIYIvUX7Q6hL+hqkpMfT7P\nT19sdl6gSzeRntwi5m3OFBqOasv+zbMUZBfHWymeMr/y7vrTC0LUq7dBMtoM1O/4\ngdW7jVg/tRvoSSiicNoxBN33shbyTApOB6jtSj1etX+jkMOvJwIDAQABo2MwYTAO\nBgNVHQ8BAf8EBAMCAYYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUA95QNVbR\nTLtm8KPiGxvDl7I90VUwHwYDVR0jBBgwFoAUA95QNVbRTLtm8KPiGxvDl7I90VUw\nDQYJKoZIhvcNAQEFBQADggEBAMucN6pIExIK+t1EnE9SsPTfrgT1eXkIoyQY/Esr\nhMAtudXH/vTBH1jLuG2cenTnmCmrEbXjcKChzUyImZOMkXDiqw8cvpOp/2PV5Adg\n06O/nVsJ8dWO41P0jmP6P6fbtGbfYmbW0W5BjfIttep3Sp+dWOIrWcBAI+0tKIJF\nPnlUkiaY4IBIqDfv8NZ5YBberOgOzW6sRBc4L0na4UU+Krk2U886UAb3LujEV0ls\nYSEY1QSteDwsOoBrp+uvFRTp2InBuThs4pFsiv9kuXclVzDAGySj4dzp30d8tbQk\nCAUw7C29C79Fv1C5qfPrmAESrciIxpg0X40KPMbp1ZWVbd4=\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIDjjCCAnagAwIBAgIQAzrx5qcRqaC7KGSxHQn65TANBgkqhkiG9w0BAQsFADBh\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3\nd3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBH\nMjAeFw0xMzA4MDExMjAwMDBaFw0zODAxMTUxMjAwMDBaMGExCzAJBgNVBAYTAlVT\nMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j\nb20xIDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IEcyMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuzfNNNx7a8myaJCtSnX/RrohCgiN9RlUyfuI\n2/Ou8jqJkTx65qsGGmvPrC3oXgkkRLpimn7Wo6h+4FR1IAWsULecYxpsMNzaHxmx\n1x7e/dfgy5SDN67sH0NO3Xss0r0upS/kqbitOtSZpLYl6ZtrAGCSYP9PIUkY92eQ\nq2EGnI/yuum06ZIya7XzV+hdG82MHauVBJVJ8zUtluNJbd134/tJS7SsVQepj5Wz\ntCO7TG1F8PapspUwtP1MVYwnSlcUfIKdzXOS0xZKBgyMUNGPHgm+F6HmIcr9g+UQ\nvIOlCsRnKPZzFBQ9RnbDhxSJITRNrw9FDKZJobq7nMWxM4MphQIDAQABo0IwQDAP\nBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBhjAdBgNVHQ4EFgQUTiJUIBiV\n5uNu5g/6+rkS7QYXjzkwDQYJKoZIhvcNAQELBQADggEBAGBnKJRvDkhj6zHd6mcY\n1Yl9PMWLSn/pvtsrF9+wX3N3KjITOYFnQoQj8kVnNeyIv/iPsGEMNKSuIEyExtv4\nNeF22d+mQrvHRAiGfzZ0JFrabA0UWTW98kndth/Jsw1HKj2ZL7tcu7XUIOGZX1NG\nFdtom/DzMNU+MeKNhJ7jitralj41E6Vf8PlwUHBHQRFXGU7Aj64GxJUTFy8bJZ91\n8rGOmaFvE7FBcf6IKshPECBV1/MUReXgRPTqh5Uykw7+U0b6LJ3/iyK5S9kJRaTe\npLiaWN0bfVKfjllDiIGknibVb63dDcY3fe0Dkhvld1927jyNxF1WW6LZZm6zNTfl\nMrY=\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIFZjCCA06gAwIBAgIQCPm0eKj6ftpqMzeJ3nzPijANBgkqhkiG9w0BAQwFADBN\nMQswCQYDVQQGEwJVUzEXMBUGA1UEChMORGlnaUNlcnQsIEluYy4xJTAjBgNVBAMT\nHERpZ2lDZXJ0IFRMUyBSU0E0MDk2IFJvb3QgRzUwHhcNMjEwMTE1MDAwMDAwWhcN\nNDYwMTE0MjM1OTU5WjBNMQswCQYDVQQGEwJVUzEXMBUGA1UEChMORGlnaUNlcnQs\nIEluYy4xJTAjBgNVBAMTHERpZ2lDZXJ0IFRMUyBSU0E0MDk2IFJvb3QgRzUwggIi\nMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCz0PTJeRGd/fxmgefM1eS87IE+\najWOLrfn3q/5B03PMJ3qCQuZvWxX2hhKuHisOjmopkisLnLlvevxGs3npAOpPxG0\n2C+JFvuUAT27L/gTBaF4HI4o4EXgg/RZG5Wzrn4DReW+wkL+7vI8toUTmDKdFqgp\nwgscONyfMXdcvyej/Cestyu9dJsXLfKB2l2w4SMXPohKEiPQ6s+d3gMXsUJKoBZM\npG2T6T867jp8nVid9E6P/DsjyG244gXazOvswzH016cpVIDPRFtMbzCe88zdH5RD\nnU1/cHAN1DrRN/BsnZvAFJNY781BOHW8EwOVfH/jXOnVDdXifBBiqmvwPXbzP6Po\nsMH976pXTayGpxi0KcEsDr9kvimM2AItzVwv8n/vFfQMFawKsPHTDU9qTXeXAaDx\nZre3zu/O7Oyldcqs4+Fj97ihBMi8ez9dLRYiVu1ISf6nL3kwJZu6ay0/nTvEF+cd\nLvvyz6b84xQslpghjLSR6Rlgg/IwKwZzUNWYOwbpx4oMYIwo+FKbbuH2TbsGJJvX\nKyY//SovcfXWJL5/MZ4PbeiPT02jP/816t9JXkGPhvnxd3lLG7SjXi/7RgLQZhNe\nXoVPzthwiHvOAbWWl9fNff2C+MIkwcoBOU+NosEUQB+cZtUMCUbW8tDRSHZWOkPL\ntgoRObqME2wGtZ7P6wIDAQABo0IwQDAdBgNVHQ4EFgQUUTMc7TZArxfTJc1paPKv\nTiM+s0EwDgYDVR0PAQH/BAQDAgGGMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcN\nAQEMBQADggIBAGCmr1tfV9qJ20tQqcQjNSH/0GEwhJG3PxDPJY7Jv0Y02cEhJhxw\nGXIeo8mH/qlDZJY6yFMECrZBu8RHANmfGBg7sg7zNOok992vIGCukihfNudd5N7H\nPNtQOa27PShNlnx2xlv0wdsUpasZYgcYQF+Xkdycx6u1UQ3maVNVzDl92sURVXLF\nO4uJ+DQtpBflF+aZfTCIITfNMBc9uPK8qHWgQ9w+iUuQrm0D4ByjoJYJu32jtyoQ\nREtGBzRj7TG5BO6jm5qu5jF49OokYTurWGT/u4cnYiWB39yhL/btp/96j1EuMPik\nAdKFOV8BmZZvWltwGUb+hmA+rYAQCd05JS9Yf7vSdPD3Rh9GOUrYU9DzLjtxpdRv\n/PNn5AeP3SYZ4Y1b+qOTEZvpyDrDVWiakuFSdjjo4bq9+0/V77PnSIMx8IIh47a+\np6tv75/fTM8BuGJqIz3nCU2AG3swpMPdB380vqQmsvZB6Akd4yCYqjdP//fx4ilw\nMUc/dNAUFvohigLVigmUdy7yWSiLfFCSCmZ4OIN1xLVaqBHG5cGdZlXPU8Sv13WF\nqUITVuwhd4GTWgzqltlJyqEI8pc7bZsEGCREjnwB8twl2F6GmrE52/WRMmrRpnCK\novfepEWFJqgejF0pW8hL2JpqA15w8oVPbEtoL8pU9ozaMv7Da4M/OMZ+\n-----END CERTIFICATE-----",
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "hdi_user": "9FA3AD2F596746F2BA3B5C2029956093_86A0WBBSWD7US5DE8ATIMFJQR_DT",
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "hdi_p[...]
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "user": "9FA3AD2F596746F2BA3B5C2029956093_86A0WBBSWD7US5DE8ATIMFJQR_RT",
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "p[...]
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT },
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "syslog_drain_url": null,
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT "volume_mounts": []
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT }
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT ]
+   2025-11-27T08:29:27.21+0800 [APP/TASK/deploy/0] OUT }
+   2025-11-27T08:29:31.46+0800 [APP/TASK/deploy/0] OUT @sap/hdi-deploy, version 5.5.1 (mode default), server version unknown (0.0.0.0), cloud version , node version 24.3.0, HDI version -1, container API version -1
+   2025-11-27T08:29:31.46+0800 [APP/TASK/deploy/0] OUT Deployment started at 2025-11-27 00:29:31
+   2025-11-27T08:29:31.46+0800 [APP/TASK/deploy/0] OUT Using hdb@0.19.12 for connection
+   2025-11-27T08:29:31.46+0800 [APP/TASK/deploy/0] OUT Detection of server version failed; root cause: HANA Database instance is stopped
+   2025-11-27T08:29:31.46+0800 [APP/TASK/deploy/0] OUT Detection of cloud version failed; root cause: HANA Database instance is stopped
+   2025-11-27T08:29:31.46+0800 [APP/TASK/deploy/0] OUT Detection of container API version failed; root cause: HANA Database instance is stopped
+   2025-11-27T08:29:31.46+0800 [APP/TASK/deploy/0] OUT Detection of HDI version failed; root cause: HANA Database instance is stopped
+   2025-11-27T08:29:31.46+0800 [APP/TASK/deploy/0] OUT Deployment ended at 2025-11-27 00:29:31
+   2025-11-27T08:29:31.46+0800 [APP/TASK/deploy/0] ERR Error: Option parameter is not supported by the server; based on detected server version unknown
+   2025-11-27T08:29:31.46+0800 [APP/TASK/deploy/0] OUT (4s 340ms)
+   2025-11-27T08:29:31.47+0800 [APP/TASK/deploy/0] ERR npm notice
+   2025-11-27T08:29:31.47+0800 [APP/TASK/deploy/0] ERR npm notice New minor version of npm available! 11.4.2 -> 11.6.4
+   2025-11-27T08:29:31.47+0800 [APP/TASK/deploy/0] ERR npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.4
+   2025-11-27T08:29:31.47+0800 [APP/TASK/deploy/0] ERR npm notice To update run: npm install -g npm@11.6.4
+   2025-11-27T08:29:31.47+0800 [APP/TASK/deploy/0] ERR npm notice
+   2025-11-27T08:29:31.52+0800 [APP/TASK/deploy/0] OUT Exit status 1
+   2025-11-27T08:29:31.62+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 stopping instance 32660ce2-b586-4d25-aa23-4ce7820a2ab3
+   2025-11-27T08:29:31.62+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 destroying container for instance 32660ce2-b586-4d25-aa23-4ce7820a2ab3
+   2025-11-27T08:29:33.18+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 successfully destroyed container for instance 32660ce2-b586-4d25-aa23-4ce7820a2ab3
+   2025-11-27T08:29:34.10+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 creating container for instance ecaaf188-689f-45e0-a28e-ecacb14d21d7
+   2025-11-27T08:29:34.45+0800 [CELL/0] OUT Security group rules were updated
+   2025-11-27T08:29:34.51+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 successfully created container for instance ecaaf188-689f-45e0-a28e-ecacb14d21d7
+   2025-11-27T08:29:37.21+0800 [APP/TASK/deploy/0] OUT Invoking pre-start scripts.
+   2025-11-27T08:29:37.35+0800 [APP/TASK/deploy/0] OUT Invoking start command.
+   2025-11-27T08:29:37.65+0800 [APP/TASK/deploy/0] OUT > start
+   2025-11-27T08:29:37.65+0800 [APP/TASK/deploy/0] OUT > node node_modules/@sap/hdi-deploy/deploy.js --use-hdb --parameter com.sap.hana.di.table/try_fast_table_migration=true
+   2025-11-27T08:29:37.75+0800 [APP/TASK/deploy/0] OUT VCAP_SERVICES: {
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "hana": [
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT {
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "label": "hana",
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "provider": null,
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "plan": "hdi-shared",
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "name": "bookshop-db-hdi-container",
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "tags": [
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "hana",
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "database",
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "relational"
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT ],
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "instance_guid": "62040c25-07ae-4e2c-85d4-a84adc7ef6be",
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "instance_name": "bookshop-db-hdi-container",
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "binding_guid": "d63bd544-431b-4268-90c9-f26ddc21ad41",
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "binding_name": null,
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "credentials": {
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "database_id": "ed5da539-d8e2-4074-bd8a-655b30ed5521",
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "host": "ed5da539-d8e2-4074-bd8a-655b30ed5521.hana.trial-us10.hanacloud.ondemand.com",
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "port": "443",
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "driver": "com.sap.db.jdbc.Driver",
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "url": "jdbc:sap://ed5da539-d8e2-4074-bd8a-655b30ed5521.hana.trial-us10.hanacloud.ondemand.com:443?encrypt=true&validateCertificate=true&currentschema=9FA3AD2F596746F2BA3B5C2029956093",
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "schema": "9FA3AD2F596746F2BA3B5C2029956093",
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "certificate": "-----BEGIN CERTIFICATE-----\nMIIDrzCCApegAwIBAgIQCDvgVpBCRrGhdWrJWZHHSjANBgkqhkiG9w0BAQUFADBh\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3\nd3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBD\nQTAeFw0wNjExMTAwMDAwMDBaFw0zMTExMTAwMDAwMDBaMGExCzAJBgNVBAYTAlVT\nMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j\nb20xIDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IENBMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4jvhEXLeqKTTo1eqUKKPC3eQyaKl7hLOllsB\nCSDMAZOnTjC3U/dDxGkAV53ijSLdhwZAAIEJzs4bg7/fzTtxRuLWZscFs3YnFo97\nnh6Vfe63SKMI2tavegw5BmV/Sl0fvBf4q77uKNd0f3p4mVmFaG5cIzJLv07A6Fpt\n43C/dxC//AH2hdmoRBBYMql1GNXRor5H4idq9Joz+EkIYIvUX7Q6hL+hqkpMfT7P\nT19sdl6gSzeRntwi5m3OFBqOasv+zbMUZBfHWymeMr/y7vrTC0LUq7dBMtoM1O/4\ngdW7jVg/tRvoSSiicNoxBN33shbyTApOB6jtSj1etX+jkMOvJwIDAQABo2MwYTAO\nBgNVHQ8BAf8EBAMCAYYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUA95QNVbR\nTLtm8KPiGxvDl7I90VUwHwYDVR0jBBgwFoAUA95QNVbRTLtm8KPiGxvDl7I90VUw\nDQYJKoZIhvcNAQEFBQADggEBAMucN6pIExIK+t1EnE9SsPTfrgT1eXkIoyQY/Esr\nhMAtudXH/vTBH1jLuG2cenTnmCmrEbXjcKChzUyImZOMkXDiqw8cvpOp/2PV5Adg\n06O/nVsJ8dWO41P0jmP6P6fbtGbfYmbW0W5BjfIttep3Sp+dWOIrWcBAI+0tKIJF\nPnlUkiaY4IBIqDfv8NZ5YBberOgOzW6sRBc4L0na4UU+Krk2U886UAb3LujEV0ls\nYSEY1QSteDwsOoBrp+uvFRTp2InBuThs4pFsiv9kuXclVzDAGySj4dzp30d8tbQk\nCAUw7C29C79Fv1C5qfPrmAESrciIxpg0X40KPMbp1ZWVbd4=\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIDjjCCAnagAwIBAgIQAzrx5qcRqaC7KGSxHQn65TANBgkqhkiG9w0BAQsFADBh\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3\nd3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBH\nMjAeFw0xMzA4MDExMjAwMDBaFw0zODAxMTUxMjAwMDBaMGExCzAJBgNVBAYTAlVT\nMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j\nb20xIDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IEcyMIIBIjANBgkqhkiG\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuzfNNNx7a8myaJCtSnX/RrohCgiN9RlUyfuI\n2/Ou8jqJkTx65qsGGmvPrC3oXgkkRLpimn7Wo6h+4FR1IAWsULecYxpsMNzaHxmx\n1x7e/dfgy5SDN67sH0NO3Xss0r0upS/kqbitOtSZpLYl6ZtrAGCSYP9PIUkY92eQ\nq2EGnI/yuum06ZIya7XzV+hdG82MHauVBJVJ8zUtluNJbd134/tJS7SsVQepj5Wz\ntCO7TG1F8PapspUwtP1MVYwnSlcUfIKdzXOS0xZKBgyMUNGPHgm+F6HmIcr9g+UQ\nvIOlCsRnKPZzFBQ9RnbDhxSJITRNrw9FDKZJobq7nMWxM4MphQIDAQABo0IwQDAP\nBgNVHRMBAf8EBTADAQH/MA4GA1UdDwEB/wQEAwIBhjAdBgNVHQ4EFgQUTiJUIBiV\n5uNu5g/6+rkS7QYXjzkwDQYJKoZIhvcNAQELBQADggEBAGBnKJRvDkhj6zHd6mcY\n1Yl9PMWLSn/pvtsrF9+wX3N3KjITOYFnQoQj8kVnNeyIv/iPsGEMNKSuIEyExtv4\nNeF22d+mQrvHRAiGfzZ0JFrabA0UWTW98kndth/Jsw1HKj2ZL7tcu7XUIOGZX1NG\nFdtom/DzMNU+MeKNhJ7jitralj41E6Vf8PlwUHBHQRFXGU7Aj64GxJUTFy8bJZ91\n8rGOmaFvE7FBcf6IKshPECBV1/MUReXgRPTqh5Uykw7+U0b6LJ3/iyK5S9kJRaTe\npLiaWN0bfVKfjllDiIGknibVb63dDcY3fe0Dkhvld1927jyNxF1WW6LZZm6zNTfl\nMrY=\n-----END CERTIFICATE-----\n-----BEGIN CERTIFICATE-----\nMIIFZjCCA06gAwIBAgIQCPm0eKj6ftpqMzeJ3nzPijANBgkqhkiG9w0BAQwFADBN\nMQswCQYDVQQGEwJVUzEXMBUGA1UEChMORGlnaUNlcnQsIEluYy4xJTAjBgNVBAMT\nHERpZ2lDZXJ0IFRMUyBSU0E0MDk2IFJvb3QgRzUwHhcNMjEwMTE1MDAwMDAwWhcN\nNDYwMTE0MjM1OTU5WjBNMQswCQYDVQQGEwJVUzEXMBUGA1UEChMORGlnaUNlcnQs\nIEluYy4xJTAjBgNVBAMTHERpZ2lDZXJ0IFRMUyBSU0E0MDk2IFJvb3QgRzUwggIi\nMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCz0PTJeRGd/fxmgefM1eS87IE+\najWOLrfn3q/5B03PMJ3qCQuZvWxX2hhKuHisOjmopkisLnLlvevxGs3npAOpPxG0\n2C+JFvuUAT27L/gTBaF4HI4o4EXgg/RZG5Wzrn4DReW+wkL+7vI8toUTmDKdFqgp\nwgscONyfMXdcvyej/Cestyu9dJsXLfKB2l2w4SMXPohKEiPQ6s+d3gMXsUJKoBZM\npG2T6T867jp8nVid9E6P/DsjyG244gXazOvswzH016cpVIDPRFtMbzCe88zdH5RD\nnU1/cHAN1DrRN/BsnZvAFJNY781BOHW8EwOVfH/jXOnVDdXifBBiqmvwPXbzP6Po\nsMH976pXTayGpxi0KcEsDr9kvimM2AItzVwv8n/vFfQMFawKsPHTDU9qTXeXAaDx\nZre3zu/O7Oyldcqs4+Fj97ihBMi8ez9dLRYiVu1ISf6nL3kwJZu6ay0/nTvEF+cd\nLvvyz6b84xQslpghjLSR6Rlgg/IwKwZzUNWYOwbpx4oMYIwo+FKbbuH2TbsGJJvX\nKyY//SovcfXWJL5/MZ4PbeiPT02jP/816t9JXkGPhvnxd3lLG7SjXi/7RgLQZhNe\nXoVPzthwiHvOAbWWl9fNff2C+MIkwcoBOU+NosEUQB+cZtUMCUbW8tDRSHZWOkPL\ntgoRObqME2wGtZ7P6wIDAQABo0IwQDAdBgNVHQ4EFgQUUTMc7TZArxfTJc1paPKv\nTiM+s0EwDgYDVR0PAQH/BAQDAgGGMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcN\nAQEMBQADggIBAGCmr1tfV9qJ20tQqcQjNSH/0GEwhJG3PxDPJY7Jv0Y02cEhJhxw\nGXIeo8mH/qlDZJY6yFMECrZBu8RHANmfGBg7sg7zNOok992vIGCukihfNudd5N7H\nPNtQOa27PShNlnx2xlv0wdsUpasZYgcYQF+Xkdycx6u1UQ3maVNVzDl92sURVXLF\nO4uJ+DQtpBflF+aZfTCIITfNMBc9uPK8qHWgQ9w+iUuQrm0D4ByjoJYJu32jtyoQ\nREtGBzRj7TG5BO6jm5qu5jF49OokYTurWGT/u4cnYiWB39yhL/btp/96j1EuMPik\nAdKFOV8BmZZvWltwGUb+hmA+rYAQCd05JS9Yf7vSdPD3Rh9GOUrYU9DzLjtxpdRv\n/PNn5AeP3SYZ4Y1b+qOTEZvpyDrDVWiakuFSdjjo4bq9+0/V77PnSIMx8IIh47a+\np6tv75/fTM8BuGJqIz3nCU2AG3swpMPdB380vqQmsvZB6Akd4yCYqjdP//fx4ilw\nMUc/dNAUFvohigLVigmUdy7yWSiLfFCSCmZ4OIN1xLVaqBHG5cGdZlXPU8Sv13WF\nqUITVuwhd4GTWgzqltlJyqEI8pc7bZsEGCREjnwB8twl2F6GmrE52/WRMmrRpnCK\novfepEWFJqgejF0pW8hL2JpqA15w8oVPbEtoL8pU9ozaMv7Da4M/OMZ+\n-----END CERTIFICATE-----",
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "hdi_user": "9FA3AD2F596746F2BA3B5C2029956093_86A0WBBSWD7US5DE8ATIMFJQR_DT",
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "hdi_p[...]
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "user": "9FA3AD2F596746F2BA3B5C2029956093_86A0WBBSWD7US5DE8ATIMFJQR_RT",
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "p[...]
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT },
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "syslog_drain_url": null,
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT "volume_mounts": []
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT }
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT ]
+   2025-11-27T08:29:37.77+0800 [APP/TASK/deploy/0] OUT }
+   2025-11-27T08:29:42.01+0800 [APP/TASK/deploy/0] OUT @sap/hdi-deploy, version 5.5.1 (mode default), server version unknown (0.0.0.0), cloud version , node version 24.3.0, HDI version -1, container API version -1
+   2025-11-27T08:29:42.01+0800 [APP/TASK/deploy/0] OUT Deployment started at 2025-11-27 00:29:42
+   2025-11-27T08:29:42.01+0800 [APP/TASK/deploy/0] OUT Using hdb@0.19.12 for connection
+   2025-11-27T08:29:42.01+0800 [APP/TASK/deploy/0] OUT Detection of server version failed; root cause: HANA Database instance is stopped
+   2025-11-27T08:29:42.01+0800 [APP/TASK/deploy/0] OUT Detection of cloud version failed; root cause: HANA Database instance is stopped
+   2025-11-27T08:29:42.01+0800 [APP/TASK/deploy/0] OUT Detection of container API version failed; root cause: HANA Database instance is stopped
+   2025-11-27T08:29:42.01+0800 [APP/TASK/deploy/0] OUT Detection of HDI version failed; root cause: HANA Database instance is stopped
+   2025-11-27T08:29:42.01+0800 [APP/TASK/deploy/0] OUT Deployment ended at 2025-11-27 00:29:42
+   2025-11-27T08:29:42.01+0800 [APP/TASK/deploy/0] ERR Error: Option parameter is not supported by the server; based on detected server version unknown
+   2025-11-27T08:29:42.01+0800 [APP/TASK/deploy/0] OUT (4s 328ms)
+   2025-11-27T08:29:42.02+0800 [APP/TASK/deploy/0] ERR npm notice
+   2025-11-27T08:29:42.02+0800 [APP/TASK/deploy/0] ERR npm notice New minor version of npm available! 11.4.2 -> 11.6.4
+   2025-11-27T08:29:42.02+0800 [APP/TASK/deploy/0] ERR npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.4
+   2025-11-27T08:29:42.02+0800 [APP/TASK/deploy/0] ERR npm notice To update run: npm install -g npm@11.6.4
+   2025-11-27T08:29:42.02+0800 [APP/TASK/deploy/0] ERR npm notice
+   2025-11-27T08:29:42.07+0800 [APP/TASK/deploy/0] OUT Exit status 1
+   2025-11-27T08:29:42.20+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 stopping instance ecaaf188-689f-45e0-a28e-ecacb14d21d7
+   2025-11-27T08:29:42.20+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 destroying container for instance ecaaf188-689f-45e0-a28e-ecacb14d21d7
+   2025-11-27T08:29:43.87+0800 [CELL/0] OUT Cell 684caff8-89cd-492b-be01-b3d0835f1763 successfully destroyed container for instance ecaaf188-689f-45e0-a28e-ecacb14d21d7
