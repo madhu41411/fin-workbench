@@ -1,0 +1,27 @@
+{
+  "name": "fin-workbench",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "dependencies": {
+    "@cap-js/hana": "^2.1.0",
+    "@sap/cds": "^9",
+    "@sap/hana-client": "^2.26.26",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@sap/cds-dk": "^9"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch:ui": "npm run dev --prefix app/mje-ui"
+  },
+  "private": true,
+  "cds": {
+    "requires": {
+      "db": "hana"
+    },
+    "hana": {
+      "deploy-format": "hdbtable"
+    }
+  }
+}

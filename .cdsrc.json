@@ -1,0 +1,14 @@
+{
+    "requires": {
+        "db": {
+            "kind": "hana",
+            "model": "*",
+            "credentials": {
+                "url": "jdbc:sap://ed5da539-d8e2-4074-bd8a-655b30ed5521.hana.trial-us10.hanacloud.ondemand.com:443?encrypt=true&validateCertificate=true&currentschema=9FA3AD2F596746F2BA3B5C2029956093",
+                "user": "9FA3AD2F596746F2BA3B5C2029956093_A0EB9M98616AGVPR0PXQY8A36_RT",
+                "password": "7jX~WK]#mMD]Z~EN&QSjn d+fU~?|~n;^q~!pFo5aNKUHO1MV#FjS90xDn MP~HWfJ1T|@^se/|e?=7#n4uA|N*_NHHpF)Y2`^#|N?|#2PFn=RaH*-<nq41N][x#tKud",
+                "schema": "9FA3AD2F596746F2BA3B5C2029956093"
+            }
+        }
+    }
+}

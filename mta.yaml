@@ -1,0 +1,51 @@
+_schema-version: '3.1'
+ID: fin-workbench
+version: 1.0.0
+description: "A simple CAP project."
+parameters:
+  enable-parallel-deployments: true
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm ci
+        - npx cds build --production
+        - cd app/mje-ui && npm install && npm run build
+        - mkdir -p gen/srv/app/mje-ui
+        - cp -r app/mje-ui/dist/. gen/srv/app/mje-ui/
+        - cd app/ppc-ui && npm install && npm run build
+        - mkdir -p gen/srv/app/ppc-ui
+        - cp -r app/ppc-ui/dist/. gen/srv/app/ppc-ui/
+        - echo "module.exports = require('./srv/server.js')" > gen/srv/server.js
+modules:
+  - name: bookshop-srv
+    type: nodejs
+    path: gen/srv
+    parameters:
+      instances: 1
+      buildpack: nodejs_buildpack
+    build-parameters:
+      builder: custom
+      commands:
+        - npm ci --production
+    provides:
+      - name: srv-api # required by consumers of CAP services (e.g. approuter)
+        properties:
+          srv-url: ${default-url}
+    requires:
+      - name: bookshop-db-hdi-container
+
+  - name: bookshop-db
+    type: hdb
+    path: gen/db
+    parameters:
+      buildpack: nodejs_buildpack
+    requires:
+      - name: bookshop-db-hdi-container
+
+resources:
+  - name: bookshop-db-hdi-container
+    type: com.sap.xs.hdi-container
+    parameters:
+      service: hana
+      service-plan: hdi-shared

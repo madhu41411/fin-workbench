@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAP Invoice Matcher</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>Invoice Matcher</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#">Dashboard</a></li>
+                    <li><a href="#">Invoices</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <h1>Invoice Reconciliation</h1>
+                <div class="user-profile">Admin User</div>
+            </header>
+
+            <!-- Telemetry Dashboard -->
+            <section class="dashboard-metrics" id="telemetry-dashboard">
+                <div class="card metric-card">
+                    <h3>Total Invoices</h3>
+                    <p id="metric-total">0</p>
+                </div>
+                <div class="card metric-card success">
+                    <h3>Matched</h3>
+                    <p id="metric-matched">0</p>
+                </div>
+                <div class="card metric-card warning">
+                    <h3>Mismatches</h3>
+                    <p id="metric-mismatch">0</p>
+                </div>
+                <div class="card metric-card info">
+                    <h3>Verified</h3>
+                    <p id="metric-verified">0</p>
+                </div>
+                <div class="card metric-card">
+                    <h3>Success Rate</h3>
+                    <p id="metric-rate">0%</p>
+                </div>
+            </section>
+
+            <!-- Filters -->
+            <section class="filters-section">
+                <div class="filter-group">
+                    <label>Status</label>
+                    <select id="filter-status">
+                        <option value="all">All Statuses</option>
+                        <option value="Matched">Matched</option>
+                        <option value="Mismatch">Mismatch</option>
+                        <option value="Pending">Pending</option>
+                        <option value="ManuallyVerified">Manually Verified</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Vendor</label>
+                    <select id="filter-vendor">
+                        <option value="all">All Vendors</option>
+                        <!-- Populated dynamically -->
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Date Range</label>
+                    <select id="filter-date">
+                        <option value="all">All Time</option>
+                        <option value="today">Today</option>
+                        <option value="week">This Week</option>
+                    </select>
+                </div>
+                <button id="btn-apply-filters" class="btn primary">Apply Filters</button>
+            </section>
+
+            <!-- Data Table -->
+            <section class="data-section">
+                <div class="table-actions">
+                    <button id="btn-verify-manual" class="btn secondary" disabled>Verify Selected</button>
+                </div>
+                <div class="table-container">
+                    <table id="invoice-table">
+                        <thead>
+                            <tr>
+                                <th><input type="checkbox" id="select-all"></th>
+                                <th>Invoice #</th>
+                                <th>Vendor</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                                <th>Confidence</th>
+                                <th>Reason</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal for Manual Verification -->
+    <div id="verification-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Manual Verification</h3>
+            <p>Please provide a reason for manually verifying the selected invoices.</p>
+            <textarea id="verification-comment" placeholder="Enter comments..."></textarea>
+            <div class="modal-actions">
+                <button id="btn-cancel-verify" class="btn text">Cancel</button>
+                <button id="btn-confirm-verify" class="btn primary">Verify</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

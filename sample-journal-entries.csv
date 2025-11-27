@@ -1,0 +1,5 @@
+GL Account,D/C,Amount,Cost Center,Text
+500100,D,1000.00,CC001,Office Supplies
+110000,C,1000.00,CC002,Cash Payment
+600200,D,2500.50,CC003,Travel Expenses
+210000,C,2500.50,CC004,Accounts Payable

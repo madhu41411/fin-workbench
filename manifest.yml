@@ -1,0 +1,25 @@
+---
+applications:
+  - name: raise-workbench
+    path: gen/srv
+    random-route: true
+    buildpacks:
+      - nodejs_buildpack
+    memory: 256M
+    disk_quota: 512M
+
+    services:
+      - inst-hana
+    env:
+      cds_requires_auth_kind: mocked
+      NODE_VERSION: 20.x
+
+  - name: raise-workbench-db-deployer
+    path: gen/db
+    no-route: true
+    buildpacks:
+      - nodejs_buildpack
+    services:
+      - inst-hana
+    env:
+      NODE_VERSION: 20.x
