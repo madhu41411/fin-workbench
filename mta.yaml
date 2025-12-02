@@ -10,11 +10,11 @@ build-parameters:
       commands:
         - npm ci
         - npx cds build --production
-        - npm install --prefix app/mje-ui
+        - npm ci --prefix app/mje-ui --no-progress --no-audit
         - npm run build --prefix app/mje-ui
         - mkdir -p gen/srv/app/mje-ui
         - cp -r app/mje-ui/dist/. gen/srv/app/mje-ui/
-        - npm install --prefix app/ppc-ui
+        - npm ci --prefix app/ppc-ui --no-progress --no-audit
         - npm run build --prefix app/ppc-ui
         - mkdir -p gen/srv/app/ppc-ui
         - cp -r app/ppc-ui/dist/. gen/srv/app/ppc-ui/
