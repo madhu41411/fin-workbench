@@ -141,7 +141,6 @@ function App() {
                     {/* Request Form */}
                     <div className="lg:col-span-1">
                         <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
-                            <h2 className="text-lg font-medium mb-4">{formData.type === 'OPEN' ? 'Open New Period' : 'Close Period'}</h2>
                             <form onSubmit={handleSubmit} className="space-y-4">
                                 <div>
                                     <label className="block text-sm font-medium text-slate-700 mb-2">Request Type</label>
