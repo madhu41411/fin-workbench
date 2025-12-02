@@ -10,10 +10,12 @@ build-parameters:
       commands:
         - npm ci
         - npx cds build --production
-        - npm install --prefix app/mje-ui && npm run build --prefix app/mje-ui
+        - npm install --prefix app/mje-ui
+        - npm run build --prefix app/mje-ui
         - mkdir -p gen/srv/app/mje-ui
         - cp -r app/mje-ui/dist/. gen/srv/app/mje-ui/
-        - npm install --prefix app/ppc-ui && npm run build --prefix app/ppc-ui
+        - npm install --prefix app/ppc-ui
+        - npm run build --prefix app/ppc-ui
         - mkdir -p gen/srv/app/ppc-ui
         - cp -r app/ppc-ui/dist/. gen/srv/app/ppc-ui/
         - mkdir -p gen/srv/app/invoice-matcher
