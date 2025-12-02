@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Create project directory
-mkdir -p ../employee-management
-cd ../employee-management
+mkdir -p ../employee
+cd ../employee
 
 # Initialize CAP project
 cds init
