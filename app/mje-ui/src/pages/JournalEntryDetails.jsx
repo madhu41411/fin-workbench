@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import { ArrowLeft, FileText, Calendar, Building, DollarSign, CheckCircle, Clock, XCircle, User, Send } from 'lucide-react';
+import NotificationModal from '../components/NotificationModal';
 
 const StatusBadge = ({ status }) => {
     const styles = {
@@ -28,6 +29,14 @@ export default function JournalEntryDetails() {
     const [previewPayload, setPreviewPayload] = useState(null);
     const [showPreview, setShowPreview] = useState(false);
 
+    // New state for Notification Modal
+    const [notification, setNotification] = useState({
+        isOpen: false,
+        title: '',
+        message: '',
+        type: 'success'
+    });
+
     useEffect(() => {
         fetchDetails();
     }, [id]);
@@ -51,7 +60,12 @@ export default function JournalEntryDetails() {
             setShowPreview(true);
         } catch (err) {
             console.error("Failed to preview payload:", err);
-            alert("Failed to generate preview. Please check logs.");
+            setNotification({
+                isOpen: true,
+                title: 'Preview Failed',
+                message: 'Failed to generate preview. Please check logs for more details.',
+                type: 'error'
+            });
         }
     };
 
@@ -63,11 +77,23 @@ export default function JournalEntryDetails() {
             const response = await axios.post(`/odata/v4/mje/JournalEntries(${id})/MJEService.postToSAP`, {});
             // Response value is the document number directly or wrapped in value
             const docNum = response.data.value || response.data;
-            alert(`Successfully posted to SAP! Document Number: ${docNum}`);
+
+            setNotification({
+                isOpen: true,
+                title: 'Posted Successfully!',
+                message: `Journal Entry has been posted to SAP.\nDocument Number: ${docNum}`,
+                type: 'success'
+            });
+
             fetchDetails(); // Refresh to show new status/number
         } catch (err) {
             console.error("Failed to post to SAP:", err);
-            alert("Failed to post to SAP. Please check logs.");
+            setNotification({
+                isOpen: true,
+                title: 'Posting Failed',
+                message: 'Failed to post to SAP. Please check logs for errors.',
+                type: 'error'
+            });
         } finally {
             setPosting(false);
         }
@@ -84,11 +110,23 @@ export default function JournalEntryDetails() {
             });
 
             const { sbpaInstanceId } = response.data;
-            alert(`Successfully triggered SBPA workflow!\nInstance ID: ${sbpaInstanceId}`);
+
+            setNotification({
+                isOpen: true,
+                title: 'Workflow Triggered!',
+                message: `SBPA Approval Workflow has been started.\nInstance ID: ${sbpaInstanceId}`,
+                type: 'success'
+            });
+
             fetchDetails(); // Refresh to show updated status
         } catch (err) {
             console.error("Failed to send to SBPA:", err);
-            alert(`Failed to trigger SBPA workflow: ${err.response?.data?.error?.message || err.message}`);
+            setNotification({
+                isOpen: true,
+                title: 'Workflow Trigger Failed',
+                message: `Failed to trigger SBPA workflow: ${err.response?.data?.error?.message || err.message}`,
+                type: 'error'
+            });
         } finally {
             setSendingToSBPA(false);
         }
@@ -298,6 +336,15 @@ export default function JournalEntryDetails() {
                     </div>
                 </div>
             )}
+
+            {/* Notification Modal */}
+            <NotificationModal
+                isOpen={notification.isOpen}
+                onClose={() => setNotification(prev => ({ ...prev, isOpen: false }))}
+                title={notification.title}
+                message={notification.message}
+                type={notification.type}
+            />
         </div>
     );
 }

@@ -102,7 +102,7 @@ export default function MyInbox() {
                                         </div>
                                     </div>
                                     <div className="mt-4">
-                                        <Link to={`/journal-entries/${task.ID}`} className="text-sm text-blue-600 hover:text-blue-700 font-medium flex items-center gap-1">
+                                        <Link to={`/mje/journal-entries/${task.ID}`} className="text-sm text-blue-600 hover:text-blue-700 font-medium flex items-center gap-1">
                                             View Details <ChevronRight className="w-4 h-4" />
                                         </Link>
                                     </div>
