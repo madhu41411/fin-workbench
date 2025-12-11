@@ -19,6 +19,7 @@ build-parameters:
         - mkdir -p gen/srv/app/invoice-matcher
         - cp -r app/invoice-matcher/. gen/srv/app/invoice-matcher/
         - echo "module.exports = require('./srv/server.js')" > gen/srv/server.js
+      timeout: 30m
 modules:
   - name: bookshop-srv
     type: nodejs
