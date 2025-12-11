@@ -10,6 +10,8 @@ build-parameters:
       commands:
         - npm ci
         - npx cds build --production
+        - echo "Running UI Build Script..."
+        - bash build_ui.sh
         - mkdir -p gen/srv/app/mje-ui
         - cp -r app/mje-ui/dist/. gen/srv/app/mje-ui/
         - mkdir -p gen/srv/app/ppc-ui
