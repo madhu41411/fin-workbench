@@ -1,0 +1,3 @@
+EMPLOYEE_ID,FIRST_NAME,LAST_NAME,EMAIL,DATE_OF_BIRTH,EMP_STATUS_ID,STATUS_CHANGED_DATE,DEGREE,UNIVERSITY,GRADUATION_YEAR
+1001,John,Doe,john.doe@example.com,1990-01-01,1,2023-01-01,Bachelor of Science,Tech University,2012
+1002,Jane,Smith,jane.smith@example.com,1992-05-15,2,2023-06-01,Master of Arts,City College,2015

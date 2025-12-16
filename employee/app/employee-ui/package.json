@@ -1,0 +1,12 @@
+{
+    "name": "employee-ui",
+    "version": "1.0.0",
+    "description": "Employee UI",
+    "scripts": {
+        "build:cf": "rm -rf dist && mkdir -p dist && cp -r webapp/* dist/"
+    },
+    "devDependencies": {
+        "@ui5/cli": "^3.0.0",
+        "@sap/ux-ui5-tooling": "^1"
+    }
+}

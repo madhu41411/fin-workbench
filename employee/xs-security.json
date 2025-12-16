@@ -1,0 +1,8 @@
+{
+    "xsappname": "employee",
+    "tenant-mode": "dedicated",
+    "description": "Security profile for Employee App",
+    "scopes": [],
+    "attributes": [],
+    "role-templates": []
+}

@@ -1,0 +1,58 @@
+<mvc:View
+    controllerName="sap.employee.ui.controller.EmployeeList"
+    xmlns="sap.m"
+    xmlns:u="sap.ui.unified"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Page title="{i18n>employeeListTitle}">
+        <headerContent>
+            <Button text="Download Template" press="onDownloadTemplate" icon="sap-icon://excel-attachment"/>
+            <Button text="Download Data" press="onDownloadData" icon="sap-icon://download"/>
+            <u:FileUploader
+                id="fileUploader"
+                name="myFileUpload"
+                uploadUrl=""
+                tooltip="Upload your file to the local server"
+                uploadComplete="handleUploadComplete"
+                change="onFileChange"
+                typeMissmatch="handleTypeMissmatch"
+                style="Emphasized"
+                fileType="csv"
+                placeholder="Upload Employee Data (CSV)"
+                buttonOnly="true"
+                icon="sap-icon://upload"
+                iconOnly="false"/>
+        </headerContent>
+        <content>
+            <Table id="employeeTable" items="{/EmployeeView}">
+                <columns>
+                    <Column><Text text="ID"/></Column>
+                    <Column><Text text="{i18n>firstName}"/></Column>
+                    <Column><Text text="{i18n>lastName}"/></Column>
+                    <Column><Text text="{i18n>email}"/></Column>
+                    <Column><Text text="DOB"/></Column>
+                    <Column><Text text="{i18n>degree}"/></Column>
+                    <Column><Text text="{i18n>university}"/></Column>
+                    <Column><Text text="Grad Year"/></Column>
+                    <Column><Text text="{i18n>status}"/></Column>
+                    <Column><Text text="Status Date"/></Column>
+                </columns>
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{EMPLOYEE_ID}"/>
+                            <Text text="{FIRST_NAME}"/>
+                            <Text text="{LAST_NAME}"/>
+                            <Text text="{EMAIL}"/>
+                            <Text text="{path: 'DATE_OF_BIRTH', type: 'sap.ui.model.type.Date', formatOptions: { style: 'medium' }}"/>
+                            <Text text="{DEGREE}"/>
+                            <Text text="{UNIVERSITY}"/>
+                            <Text text="{GRADUATION_YEAR}"/>
+                            <Text text="{EMP_STATUS_NAME}"/>
+                            <Text text="{path: 'STATUS_CHANGE_DATE', type: 'sap.ui.model.type.Date', formatOptions: { style: 'medium' }}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
